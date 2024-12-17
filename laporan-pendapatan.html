@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="CSS/boostrap.min.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/navbar.css" />
+    <script src="CSS/navbar.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="container-header border-bottom">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand ps-3 pe-5" href="#">WashManage</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+              <li class="nav-item">
+                <a
+                  class="nav-link active ps-2 pe-5"
+                  aria-current="page"
+                  href="beranda.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="pesanan.html">Pesanan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="laporan.html">Laporan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="pengaturan.html"
+                  >Pengaturan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- End of Navbar -->
+
+    <!-- Grafik Pendapatan -->
+    <div class="container mt-5" style="padding-top: 50px">
+      <h3 class="text-start mb-4">Grafik Pendapatan</h3>
+
+      <!-- Filter Tanggal -->
+      <div class="row mb-5">
+        <div class="col-md-4">
+          <label for="startDate" class="form-label">Tanggal Mulai</label>
+          <input type="date" id="startDate" class="form-control" />
+        </div>
+        <div class="col-md-4">
+          <label for="endDate" class="form-label">Tanggal Akhir</label>
+          <input type="date" id="endDate" class="form-control" />
+        </div>
+        <div class="col-md-2 d-flex align-items-end mt-2">
+          <button id="filterButton" class="btn btn-primary w-100">
+            Filter
+          </button>
+        </div>
+      </div>
+
+      <!-- Grafik -->
+      <canvas id="revenueChart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- Script Chart.js -->
+    <script>
+      // Data awal pendapatan
+      const rawData = [
+        { date: "2024-12-12", revenue: 750000 },
+        { date: "2024-12-13", revenue: 820000 },
+        { date: "2024-12-14", revenue: 680000 },
+        { date: "2024-12-15", revenue: 720000 },
+        { date: "2024-12-16", revenue: 890000 },
+        { date: "2024-12-17", revenue: 910000 },
+      ];
+
+      // Konfigurasi Chart.js
+      const ctx = document.getElementById("revenueChart").getContext("2d");
+      let revenueChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: rawData.map((data) => data.date),
+          datasets: [
+            {
+              label: "Pendapatan (Rp)",
+              data: rawData.map((data) => data.revenue),
+              backgroundColor: "rgba(75, 192, 192, 0.2)",
+              borderColor: "rgba(75, 192, 192, 1)",
+              borderWidth: 2,
+              tension: 0.4,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "top",
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+
+      // Fungsi untuk memfilter data
+      function filterData(startDate, endDate) {
+        const filteredData = rawData.filter((data) => {
+          const date = new Date(data.date);
+          return date >= new Date(startDate) && date <= new Date(endDate);
+        });
+
+        // Update grafik
+        revenueChart.data.labels = filteredData.map((data) => data.date);
+        revenueChart.data.datasets[0].data = filteredData.map(
+          (data) => data.revenue
+        );
+        revenueChart.update();
+      }
+
+      // Event Listener pada tombol filter
+      document.getElementById("filterButton").addEventListener("click", () => {
+        const startDate = document.getElementById("startDate").value;
+        const endDate = document.getElementById("endDate").value;
+
+        if (startDate && endDate) {
+          filterData(startDate, endDate);
+        } else {
+          alert("Harap pilih tanggal mulai dan akhir!");
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="CSS/boostrap.bundle.js"></script>
+    <script src="CSS/navbar.js"></script>
+  </body>
+</html>

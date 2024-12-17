@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="CSS/boostrap.min.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/navbar.css" />
+    <link rel="stylesheet" href="CSS/navbar.js" />
+    <title>Pengaturan</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="container-header border-bottom">
+      <nav  class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand ps-3 pe-5" href="#">WashManage</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+              <li class="nav-item">
+                <a
+                  class="nav-link active ps-2 pe-5"
+                  aria-current="page"
+                  href="beranda.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="pesanan.html">Pesanan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="laporan.html">Laporan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="pengaturan.html"
+                  >Pengaturan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- End of Navbar -->
+
+    <!-- Table Akun -->
+    <div class="container mt-4 table-responsive" style="padding-top: 50px;">
+      <div class="border">
+        <!-- Status Pesanan -->
+        <div class="row ms-0 me-0 bg-body-secondary pt-1 pb-2">
+          <div class="col-12">
+            <h5 class="mb-0">Akun</h5>
+          </div>
+        </div>
+        <!-- Akun -->
+        <div class="row ms-0 me-0 p-3 align-items-center">
+          <div class="col-auto">
+            <div
+              class="pic bg-body-secondary d-flex align-items-center justify-content-center"
+              style="width: 55px; height: 55px; border-radius: 50%"
+            >
+              <i class="fa-regular fa-user fa-2x"></i>
+            </div>
+          </div>
+          <div class="col">
+            <h6 class="mb-0">Haidar Firmansyah</h6>
+            <small class="text-muted">haefirmansyah@gmail.com</small>
+          </div>
+          <div class="col-auto">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="btn-refresh"
+            >
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="border pt-4">
+        <!-- Status Pesanan -->
+        <div class="row ms-0 me-0 bg-body-secondary pt-1 pb-2">
+          <div class="col-12">
+            <h5 class="mb-0">Menu</h5>
+          </div>
+        </div>
+        <!-- Outlet -->
+        <div class="row ms-0 me-0 p-3 align-items-center">
+          <div class="col-auto">
+            <div
+              class="pic bg-body-secondary d-flex align-items-center justify-content-center"
+              style="width: 55px; height: 55px; border-radius: 50%"
+            >
+              <i class="fa-solid fa-store fa-2x"></i>
+            </div>
+          </div>
+          <div class="col">
+            <h6 class="mb-0">Outlet</h6>
+            <small class="text-muted">Kelola Outlet anda</small>
+          </div>
+          <div class="col-auto">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="btn-refresh"
+            >
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="row ms-0 me-0 p-3 align-items-center">
+          <div class="col-auto">
+            <div
+              class="pic bg-body-secondary d-flex align-items-center justify-content-center"
+              style="width: 55px; height: 55px; border-radius: 50%"
+            >
+              <i class="fa-solid fa-print fa-2x"></i>
+            </div>
+          </div>
+          <div class="col">
+            <h6 class="mb-0">Nota Cetak</h6>
+            <small class="text-muted">Mengelola Nota Cetak Tagihan Transaksi</small>
+          </div>
+          <div class="col-auto">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="btn-refresh"
+            >
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div
+      </div>
+    </div>
+
+    <!-- End of Table Status Pesanan -->
+
+    <script src="CSS/boostrap.bundle.js"></script>
+    <script src="CSS/navbar.js"></script>
+  </body>
+</html>

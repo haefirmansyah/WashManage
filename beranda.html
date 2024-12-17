@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="CSS/boostrap.min.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/navbar.css" />
+    <link rel="stylesheet" href="CSS/navbar.js" />
+
+    <title>Beranda</title>
+  </head>
+  <body style="margin-bottom: 100px">
+    <div class="container-header">
+      <div class="container-header">
+
+        <!-- start navbar -->
+        <nav
+          class="navbar navbar-expand-lg  border-bottom fixed-top"
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand ps-3 pe-5" href="#">WashManage</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+                <li class="nav-item">
+                  <a class="nav-link ps-2 pe-5" href="beranda.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link ps-2 pe-5" href="pesanan.html">Pesanan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link ps-2 pe-5" href="laporan.html">Laporan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link ps-2 pe-5" href="pengaturan.html">Pengaturan</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+
+    <!-- End of Navbar -->
+
+    <!-- Table Pendapatan -->
+    <div
+      class="container text-center mt-4 table-responsive pe-0 ps-0 " 
+      style="padding-top: 50px;"
+    >
+      <div
+        class="row ms-0 me-0"
+        style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+      >
+        <div class="col-5 border">
+          <div class="row">
+            <div class="col pt-1">Pendapatan Hari ini</div>
+          </div>
+          <div class="row">
+            <div
+              class="col pt-2 pb-2 fw-medium"
+              style="color: rgb(11, 236, 67)"
+            >
+              Rp 554000
+            </div>
+          </div>
+        </div>
+        <div class="col-5 border">
+          <div class="row">
+            <div class="col pt-1">Pengeluaran Hari ini</div>
+          </div>
+          <div class="row">
+            <div class="col pt-2 pb-2 fw-medium" style="color: rgb(255, 81, 0)">
+              Rp 123000
+            </div>
+          </div>
+        </div>
+        <div class="col-1">
+          <button
+            class="btn btn-outline-secondary mt-3"
+            type="button"
+            id="btn-refresh"
+          >
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- End of Table Pendapatan -->
+
+    <!-- Table Status Pesanan -->
+    <div class="container mt-5 table-responsive ps-0 pe-0">
+      <div class="border pb-2">
+        <!-- Status Pesanan -->
+        <div
+          class="row ms-0 me-0 pt-1 pb-1"
+          style="background-color: rgb(114, 114, 114); color: white"
+        >
+          <div class="col-12">
+            <div class="row">
+              <div class="col fs-5">Status Pesanan</div>
+            </div>
+          </div>
+        </div>
+        <!-- Total Pesanan -->
+        <div class="row ms-1 me-1">
+          <div class="col-11">
+            <div class="row">
+              <div class="col pt-1">Total Pesanan</div>
+            </div>
+          </div>
+          <div class="col-1 text-center">10</div>
+        </div>
+        <!-- Pesanan Diterima -->
+        <div class="row ms-1 me-1">
+          <div class="col-11">
+            <div class="row">
+              <div class="col pt-1">Pesanan Diterima</div>
+            </div>
+          </div>
+          <div class="col-1 text-center">2</div>
+        </div>
+        <!-- Pesanan Diproses -->
+        <div class="row ms-1 me-1">
+          <div class="col-11">
+            <div class="row">
+              <div class="col pt-1">Pesanan Diproses</div>
+            </div>
+          </div>
+          <div class="col-1 text-center">4</div>
+        </div>
+        <!-- Pesanan Siap Diambil -->
+        <div class="row ms-1 me-1">
+          <div class="col-11">
+            <div class="row">
+              <div class="col pt-1">Pesanan Siap Diambil</div>
+            </div>
+          </div>
+          <div class="col-1 text-center">3</div>
+        </div>
+        <!-- Pesanan Selesai -->
+        <div class="row ms-1 me-1">
+          <div class="col-11">
+            <div class="row">
+              <div class="col pt-1">Pesanan Selesai</div>
+            </div>
+          </div>
+          <div class="col-1 text-center">1</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End of Table Status Pesanan -->
+
+    <!-- Grid Menu Options -->
+    <div class="container mt-5 scrollable-mobile pb-4">
+      <div class="row text-center">
+        <!-- Buat Pesanan -->
+        <div class="col-md-4 mb-4">
+          <div
+            class="card index-card card-buat-pesanan"
+            style="background-color: rgb(13, 167, 59)"
+          >
+            <a
+              href="#"
+              class="text-decoration-none color-black text-secondary"
+              data-bs-toggle="modal"
+              data-bs-target="#modalTambahPesanan"
+            >
+              <div class="card-body">
+                <i class="fa-solid fa-cart-shopping fa-2x"></i>
+                <h5 class="card-title">Buat Pesanan</h5>
+                <p class="card-text">
+                  Membuat pesanan berdasarkan pelanggan dan layanan yang
+                  diinginkan
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Pelanggan -->
+        <div class="col-md-4 mb-4">
+          <div
+            class="card index-card"
+            style="background-color: rgb(167, 152, 13)"
+          >
+            <a
+              href="pelanggan.html"
+              class="text-decoration-none color-black text-secondary"
+            >
+              <div class="card-body">
+                <i class="fa-solid fa-users fa-2x"></i>
+                <h5 class="card-title">Pelanggan</h5>
+                <p class="card-text">
+                  Informasi daftar pelanggan, Menambahkan data pelanggan
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Layanan -->
+        <div class="col-md-4 mb-4">
+          <div
+            class="card index-card"
+            style="background-color: rgb(102, 11, 114)"
+          >
+            <a
+              href="layanan.html"
+              class="text-decoration-none color-black text-secondary"
+            >
+              <div class="card-body">
+                <i class="fa-solid fa-briefcase fa-2x"></i>
+                <h5 class="card-title">Layanan</h5>
+                <p class="card-text">
+                  Layanan yang tersedia, Menambahkan layanan baru
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Pengeluaran -->
+        <div class="col-md-4 mb-4">
+          <div
+            class="card index-card"
+            style="background-color: rgb(41, 13, 167)"
+          >
+            <a
+              href="pengeluaran.html"
+              class="text-decoration-none color-black text-secondary"
+            >
+              <div class="card-body">
+                <i class="fa-solid fa-coins fa-2x"></i>
+                <h5 class="card-title">Pengeluaran</h5>
+                <p class="card-text">Laporan terkait pengeluaran</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- Batal Pesanan -->
+        <div class="col-md-4 mb-4">
+          <div class="card index-card"  style="background-color: rgb(190, 13, 131)">
+            <a
+              href="pesanan-batal.html"
+              class="text-decoration-none color-black text-secondary"
+             
+            >
+              <div class="card-body">
+                <i class="fa-solid fa-ban fa-2x"></i>
+                <h5 class="card-title">Pesanan Batal</h5>
+                <p class="card-text">Membatalkan Pesanan</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Grid -->
+
+    <!-- Modal tambah pesanan -->
+    <div
+      class="modal fade"
+      id="modalTambahPesanan"
+      tabindex="-1"
+      aria-labelledby="modalTambahPesananLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTambahPesananLabel">
+              Tambah Pesanan
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formTambahPesanan">
+              <div class="mb-1">
+                <label for="no-nota"><small>No Nota</small></label>
+                <p id="no-nota">INV-003</p>
+              </div>
+              <div class="mb-3">
+                <label for="namaPelanggan" class="form-label"
+                  >Nama Pelanggan</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="namaPelanggan"
+                  placeholder="Masukkan nama pelanggan"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="jenisLayanan" class="form-label"
+                  >Jenis Layanan</label
+                >
+                <select class="form-select" id="jenisLayanan">
+                  <option selected>Pilih layanan...</option>
+                  <option value="1">Kiloan</option>
+                  <option value="2">Meteran</option>
+                  <option value="3">Pasang</option>
+                  <option value="3">Satuan</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="berat" class="form-label">Kuantitas (kg)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="kuantitas"
+                  placeholder="Masukkan Kuantitas"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="tanggal-pesan" class="form-label"
+                  >Tanggal Pesan</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="tanggal-pesan"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="estimasi-selesai" class="form-label"
+                  >Estimasi selesai</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="estimasi-selesai"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Batal
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="btnSimpanPesanan"
+              data-bs-toggle="modal"
+              data-bs-target="#tambahPesananModal"
+            >
+              Tambah
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Selesai -->
+    <div
+      class="modal fade"
+      id="tambahPesananModal"
+      tabindex="-1"
+      aria-labelledby="tambahPesananModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Pesanan baru berhasil ditambahkan ke menu Pesanan
+          </div>
+          <div class="modal-footer border-0">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Selesai
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="CSS/boostrap.bundle.js"></script>
+    <script src="CSS/navbar.js"></script>
+  </body>
+</html>

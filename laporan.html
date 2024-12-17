@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="CSS/boostrap.min.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/navbar.css" />
+    <script src="CSS/navbar.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="container-header border-bottom">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand ps-3 pe-5" href="#">WashManage</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+              <li class="nav-item">
+                <a
+                  class="nav-link active ps-2 pe-5"
+                  aria-current="page"
+                  href="beranda.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="pesanan.html">Pesanan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="laporan.html">Laporan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="pengaturan.html"
+                  >Pengaturan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- End of Navbar -->
+
+    <div class="container mt-4 table-responsive" style="padding-top: 50px">
+      <div class="border">
+        <!-- Laba Rugi -->
+        <div class="row ms-0 me-0 p-2 align-items-center">
+          <div class="col-auto">
+            <div
+              class="pic bg-body-secondary d-flex align-items-center justify-content-center"
+              style="width: 50px; height: 50px; border-radius: 50%"
+            >
+              <i class="fa-regular fa-user fa-2x" style="color: black"></i>
+            </div>
+          </div>
+          <div class="col">
+            <h5 class="mb-0">Laporan Laba Rugi</h5>
+          </div>
+          <div class="col-auto">
+            <a href="laporan-laba-rugi.html"
+              ><button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="btn-refresh"
+              >
+                <i class="fa-solid fa-angle-right"></i></button
+            ></a>
+          </div>
+        </div>
+        <!-- Pendapatan -->
+        <div class="row ms-0 me-0 p-2 align-items-center border-top">
+          <div class="col-auto">
+            <div
+              class="pic bg-body-secondary d-flex align-items-center justify-content-center"
+              style="width: 50px; height: 50px; border-radius: 50%"
+            >
+              <i class="fa-solid fa-arrow-down fa-2x" style="color: black"></i>
+            </div>
+          </div>
+          <div class="col">
+            <h5 class="mb-0">Laporan Pendapatan</h5>
+          </div>
+          <div class="col-auto">
+            <a href="laporan-pendapatan.html"
+              ><button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="btn-refresh"
+              >
+                <i class="fa-solid fa-angle-right"></i></button
+            ></a>
+          </div>
+        </div>
+        <!-- Pengeluaran -->
+        <div class="row ms-0 me-0 p-2 align-items-center border-top">
+          <div class="col-auto">
+            <div
+              class="pic bg-body-secondary d-flex align-items-center justify-content-center"
+              style="width: 50px; height: 50px; border-radius: 50%"
+            >
+              <i class="fa-solid fa-arrow-up fa-2x" style="color: black"></i>
+            </div>
+          </div>
+          <div class="col">
+            <h5 class="mb-0">Laporan Pengeluaran</h5>
+          </div>
+          <div class="col-auto">
+            <a href="laporan-pengeluaran.html"
+              ><button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="btn-refresh"
+              >
+                <i class="fa-solid fa-angle-right"></i></button
+            ></a>
+          </div>
+        </div>
+        <!-- Pesanan Masuk dan Batal -->
+        <div class="row ms-0 me-0 p-2 align-items-center border-top">
+          <div class="col-auto">
+            <div
+              class="pic bg-body-secondary d-flex align-items-center justify-content-center"
+              style="width: 50px; height: 50px; border-radius: 50%"
+            >
+              <i
+                class="fa-solid fa-clipboard-list fa-2x"
+                style="color: black"
+              ></i>
+            </div>
+          </div>
+          <div class="col">
+            <h5 class="mb-0">Laporan Pesanan Masuk dan Batal</h5>
+          </div>
+          <div class="col-auto">
+            <a href="laporan-pesanan-masuk-batal.html"
+              ><button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="btn-refresh"
+              >
+                <i class="fa-solid fa-angle-right"></i></button
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="CSS/boostrap.bundle.js"></script>
+    <script src="CSS/navbar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-bottom: 200px;
+
+}
+
+
+/* Navbar */
+
+
+.navbar-toggler {
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler.collapsed {
+  transform: rotate(0deg);
+}
+
+.navbar-toggler:not(.collapsed) {
+  transform: rotate(180deg);
+}
+
+.navbar .nav-link:hover {
+  color: #ffae17 !important;
+  font-weight: bold;
+  /* Warna teks saat hover */
+  transition: background-color 0.3s, color 0.3s;
+  /* Animasi transisi */
+}
+
+
+
+/* End Of Navbar */
+
+.grid-scrollable {
+  max-height: 450px;
+  /* Sesuaikan tinggi maksimal dengan kebutuhan */
+  overflow-y: auto;
+  /* Aktifkan scrolling vertikal */
+}
+
+
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar-nav .nav-link {
+    font-size: 14px;
+
+  }
+
+
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+
+  .scrollable-mobile {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+}
+
+
+@media (max-width: 576px) {
+  body {
+    font-size: 3.5vw;
+  }
+
+  .form-select {
+    width: auto;
+    /* Set a minimum width for the select elements */
+    max-width: none;
+    /* Allow select to expand based on content */
+  }
+
+  .info-pelanggan {
+    margin-left: 55px;
+  }
+
+
+}
+
+
+/* HOVER INDEX */
+
+
+.card-body {
+  color: rgb(241, 241, 241);
+}
+
+.index-card a:hover {
+  background-color: rgb(85, 85, 85);
+  transition: 0.5s;
+}
+
+.index-card a:hover .card-body {
+  color: white;
+}
+
+/* Pesanan */
+.card-pesanan a:hover .card-info-pesanan {
+  background-color: rgb(119, 119, 119);
+  color: white;
+  transition: 0.3s;
+
+}
+
+.card-layanan:hover, .card-pelanggan:hover, .card-pengeluaran:hover, .card-pesanan-batal:hover {
+  background-color: rgb(119, 119, 119);
+  color: white;
+  transition: 0.3s;
+
+}
+
+.btn-batal:hover {
+  background-color: rgb(119, 119, 119);
+  color: white;
+  transition: 0.3s;
+}

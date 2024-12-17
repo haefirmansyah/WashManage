@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="CSS/boostrap.min.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/navbar.css" />
+    <link rel="stylesheet" href="CSS/navbar.js" />
+    <title>Layanan</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="container-header border-bottom">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand ps-3 pe-5" href="#">WashManage</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+              <li class="nav-item">
+                <a
+                  class="nav-link active ps-2 pe-5"
+                  aria-current="page"
+                  href="beranda.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="pesanan.html">Pesanan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="laporan.html">Laporan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="pengaturan.html"
+                  >Pengaturan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- End of Navbar -->
+
+    <!-- Search and Select Category -->
+    <div class="container mt-4" style="padding-top: 60px;">
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control pt-2 pb-2"
+              placeholder="Cari daftar layanan"
+              aria-label="Cari daftar layanan"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="btn-search"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button
+              class="btn btn-outline-secondary ms-2"
+              type="button"
+              id="btn-add-layanan"
+              data-bs-toggle="modal"
+              data-bs-target="#addLayananModal"
+            >
+              <i class="fa-solid fa-add"></i>
+            </button>
+          </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mb-3 ms-2">
+          <button
+            class="btn btn-outline-secondary me-3"
+            type="button"
+            id="btn-search"
+          >
+            Kiloan
+          </button>
+          <button
+            class="btn btn-outline-secondary me-3"
+            type="button"
+            id="btn-search"
+          >
+            Meteran
+          </button>
+          <button
+            class="btn btn-outline-secondary me-3"
+            type="button"
+            id="btn-search"
+          >
+            Pasang
+          </button>
+          <button
+            class="btn btn-outline-secondary me-3"
+            type="button"
+            id="btn-search"
+          >
+            Satuan
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- End Search and Select Category -->
+
+    <!-- Grid Layanan -->
+    <div class="container mt-3 grid-scrollable">
+      <div class="row text-center">
+        <!-- Kolom Layanan-->
+        <div class="col-md-12 mb-2">
+          <div class="card card-info-layanan card-layanan mb-2">
+            <div class="info-1 row">
+              <!-- left -->
+              <div class="col-4">
+                <div class="label col pt-1 text-start ps-3">Kiloan</div>
+              </div>
+              <!-- mid -->
+              <div class="col-5"></div>
+              <div class="col-2 pe-2">
+                <div class="row">
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-edit">
+                      <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                    <button class="btn btn-hapus">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-bottom"></div>
+            <div class="row mt-2 mb-2">
+              <!-- left -->
+              <div class="col-4">
+                <div class="row">
+                  <div class="label col pt-1 text-start ps-4">Nama paket</div>
+                </div>
+                <div class="row">
+                  <div class="col text-start ps-4">Cuci biasa</div>
+                </div>
+                <div class="row">
+                  <div class="label col pt-1 text-start ps-4">Total Harga</div>
+                </div>
+                <div class="row">
+                  <div class="col text-start ps-4 fs-5">
+                    <span style="font-size: 14px">Rp </span>7000
+                    <span>/kg</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="row">
+                  <div class="label col pt-1 text-start ps-4">
+                    Estimasi Pengerjaan
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col text-start ps-4">2 Hari</div>
+                </div>
+                <div class="row">
+                  <div class="label col pt-1 text-start ps-4">Keterangan</div>
+                </div>
+                <div class="row">
+                  <div class="col text-start ps-4">Cuci, bilas dan setrika</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 mb-2">
+          <div class="card card-info-layanan card-layanan mb-2">
+            <div class="info-1 row">
+              <!-- left -->
+              <div class="col-4">
+                <div class="label col pt-1 text-start ps-3">Kiloan</div>
+              </div>
+              <!-- mid -->
+              <div class="col-5"></div>
+              <div class="col-2 pe-2">
+                <div class="row">
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-edit">
+                      <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                    <button class="btn btn-hapus">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-bottom"></div>
+            <div class="row mt-2 mb-2">
+              <!-- left -->
+              <div class="col-4">
+                <div class="row">
+                  <div class="label col pt-1 text-start ps-4">Nama paket</div>
+                </div>
+                <div class="row">
+                  <div class="col text-start ps-4">Cuci biasa</div>
+                </div>
+                <div class="row">
+                  <div class="label col pt-1 text-start ps-4">Total Harga</div>
+                </div>
+                <div class="row">
+                  <div class="col text-start ps-4 fs-5">
+                    <span style="font-size: 14px">Rp </span>7000
+                    <span>/kg</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="row">
+                  <div class="label col pt-1 text-start ps-4">
+                    Estimasi Pengerjaan
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col text-start ps-4">2 Hari</div>
+                </div>
+                <div class="row">
+                  <div class="label col pt-1 text-start ps-4">Keterangan</div>
+                </div>
+                <div class="row">
+                  <div class="col text-start ps-4">Cuci, bilas dan setrika</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12 mb-2">
+          <div class="card card-info-layanan card-layanan mb-2">
+            <div class="info-1 row">
+              <!-- left -->
+              <div class="col-4">
+                <div class="label col pt-1 text-start ps-3">Kiloan</div>
+              </div>
+              <!-- mid -->
+              <div class="col-5"></div>
+              <div class="col-2 pe-2">
+                <div class="row">
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-edit">
+                      <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                    <button class="btn btn-hapus">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-bottom"></div>
+            <div class="row mt-2 mb-2">
+              <!-- left -->
+              <div class="col-4">
+                <div class="row">
+                  <div class="label col pt-1 text-start ps-4">Nama paket</div>
+                </div>
+                <div class="row">
+                  <div class="col text-start ps-4">Cuci biasa</div>
+                </div>
+                <div class="row">
+                  <div class="label col pt-1 text-start ps-4">Total Harga</div>
+                </div>
+                <div class="row">
+                  <div class="col text-start ps-4 fs-5">
+                    <span style="font-size: 14px">Rp </span>7000
+                    <span>/kg</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="row">
+                  <div class="label col pt-1 text-start ps-4">
+                    Estimasi Pengerjaan
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col text-start ps-4">2 Hari</div>
+                </div>
+                <div class="row">
+                  <div class="label col pt-1 text-start ps-4">Keterangan</div>
+                </div>
+                <div class="row">
+                  <div class="col text-start ps-4">Cuci, bilas dan setrika</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+    </div>
+
+    <!-- End Grid Layanan -->
+
+    <!-- Modal Tambah Layanan -->
+
+    <div class="modal fade" id="addLayananModal" tabindex="-1" aria-labelledby="addLayananModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addLayananModalLabel">Tambah Layanan</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="form-add-Layanan">
+              <div class="mb-3">
+                <select class="form-select" id="kategori" required>
+                  <option value="" disabled selected>Pilih Kategori</option>
+                  <option value="Kiloan">Kiloan</option>
+                  <option value="Meteran">Meteran</option>
+                  <option value="Pasang">Pasang</option>
+                  <option value="Satuan">Satuan</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Masukkan nama paket" required />
+              </div>
+              <div class="mb-3">
+                <input type="number" class="form-control" id="total" placeholder="Total harga" required />
+              </div>
+              <div class="mb-3">
+                <input type="number" class="form-control" id="total" placeholder="Estimasi pengerjaan (Hari)" required />
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" id="deskripsi" rows="3" placeholder="Keterangan Layanan" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100"
+              data-bs-toggle="modal"
+            data-bs-target="#tambahLayananModal"
+              >Simpan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Selesai -->
+    <div
+      class="modal fade"
+      id="tambahLayananModal"
+      tabindex="-1"
+      aria-labelledby="tambahLayananModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Layanan baru berhasil ditambahkan</div>
+          <div class="modal-footer border-0">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Selesai
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="CSS/boostrap.bundle.js"></script>
+    <script src="CSS/navbar.js"></script>
+  </body>
+</html>

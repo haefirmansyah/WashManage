@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="CSS/boostrap.min.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/navbar.css" />
+    <link rel="stylesheet" href="CSS/navbar.js" />
+    <title>Pesanan</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="container-header border-bottom">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary border-bottom fixed-top"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand ps-3 pe-5" href="#">WashManage</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-4">
+              <li class="nav-item">
+                <a
+                  class="nav-link active ps-2 pe-5"
+                  aria-current="page"
+                  href="beranda.html"
+                  >Beranda</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="pesanan.html">Pesanan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="laporan.html">Laporan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ps-2 pe-5" href="pengaturan.html"
+                  >Pengaturan</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- End of Navbar -->
+
+    <!-- Search and Select Category -->
+    <div class="container mt-4" style="padding-top: 60px">
+      <div class="row">
+        <div class="col-12 mb-3">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control pt-2 pb-2"
+              placeholder="Cari daftar pesanan"
+              aria-label="Cari daftar pesanan"
+              aria-describedby="button-addon2"
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="btn-search"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button
+              class="btn btn-outline-secondary ms-2"
+              type="button"
+              id="btn-filter"
+            >
+              <i class="fa-solid fa-filter"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row ms-0 me-0 overflow-auto">
+        <div class="d-flex">
+          <select
+            class="col form-select me-3"
+            aria-label="Default select example"
+          >
+            <option selected>Status pesanan</option>
+            <option value="1">Pesanan diterima</option>
+            <option value="2">Pesanan diproses</option>
+            <option value="3">Pesanan selesai</option>
+          </select>
+          <select
+            class="col form-select me-3"
+            aria-label="Default select example"
+          >
+            <option selected>Status pembayaran</option>
+            <option value="1">Lunas</option>
+            <option value="2">Pembayaran</option>
+          </select>
+          <select class="col form-select" aria-label="Default select example">
+            <option selected>Tanggal pesanan</option>
+            <option value="1">Hari ini</option>
+            <option value="2">Kemarin</option>
+            <option value="3">7 hari terakhir</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- End select category -->
+
+    <!-- Grid Pesanan -->
+    <div class="container mt-5 grid-scrollable">
+      <div class="row text-center">
+        <!-- Kolom Pesanan -->
+        <div class="col-md-12 mb-4 card-pesanan">
+          <!-- CARD PESANAN 1 -->
+          <a href="rincian-pesanan.html" style="text-decoration: none"
+            ><div
+              class="card card-info-pesanan mb-2"
+              style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+            >
+              <div class="info-1 row ms-0 me-0">
+                <!-- left -->
+                <div class="col-4">
+                  <div class="row">
+                    <div class="col pt-1 text-start ps-3">Tanggal Pesanan</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-3">16-11-024</div>
+                  </div>
+                </div>
+                <!-- mid -->
+                <div class="col-4">
+                  <div class="row">
+                    <div class="col pt-1 text-start ps-4">Estimasi Selesai</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4">17-11-2024</div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="row">
+                    <div class="status-pesanan col pt-2 text-end fw-bolder">
+                      Diproses
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="border-bottom"></div>
+              <div class="row mt-2 mb-2">
+                <!-- left -->
+                <div class="col-4">
+                  <div class="row">
+                    <div class="label col pt-1 text-start ps-4">No. Nota</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4">INV-001</div>
+                  </div>
+                  <div class="row">
+                    <div class="label col pt-1 text-start ps-4">
+                      Total Harga
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4 fs-5">
+                      <span style="font-size: 16px">Rp </span>14000
+                    </div>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                    <div class="label col pt-1 text-start ps-4">Nama</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4">Haidar Firmansyah</div>
+                  </div>
+                </div>
+              </div>
+            </div></a
+          >
+          <a href="rincian-pesanan.html" style="text-decoration: none"
+            ><div
+              class="card card-info-pesanan mb-2"
+              style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+            >
+              <div class="info-1 row ms-0 me-0">
+                <!-- left -->
+                <div class="col-4">
+                  <div class="row">
+                    <div class="col pt-1 text-start ps-3">Tanggal Pesanan</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-3">16-11-024</div>
+                  </div>
+                </div>
+                <!-- mid -->
+                <div class="col-4">
+                  <div class="row">
+                    <div class="col pt-1 text-start ps-4">Estimasi Selesai</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4">17-11-2024</div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="row">
+                    <div class="status-pesanan col pt-2 text-end fw-bolder">
+                      Diproses
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="border-bottom"></div>
+              <div class="row mt-2 mb-2">
+                <!-- left -->
+                <div class="col-4">
+                  <div class="row">
+                    <div class="label col pt-1 text-start ps-4">No. Nota</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4">INV-001</div>
+                  </div>
+                  <div class="row">
+                    <div class="label col pt-1 text-start ps-4">
+                      Total Harga
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4 fs-5">
+                      <span style="font-size: 16px">Rp </span>14000
+                    </div>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                    <div class="label col pt-1 text-start ps-4">Nama</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4">Haidar Firmansyah</div>
+                  </div>
+                </div>
+              </div>
+            </div></a
+          >
+          <a href="rincian-pesanan.html" style="text-decoration: none"
+            ><div
+              class="card card-info-pesanan mb-2"
+              style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+            >
+              <div class="info-1 row ms-0 me-0">
+                <!-- left -->
+                <div class="col-4">
+                  <div class="row">
+                    <div class="col pt-1 text-start ps-3">Tanggal Pesanan</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-3">16-11-024</div>
+                  </div>
+                </div>
+                <!-- mid -->
+                <div class="col-4">
+                  <div class="row">
+                    <div class="col pt-1 text-start ps-4">Estimasi Selesai</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4">17-11-2024</div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="row">
+                    <div class="status-pesanan col pt-2 text-end fw-bolder">
+                      Diproses
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="border-bottom"></div>
+              <div class="row mt-2 mb-2">
+                <!-- left -->
+                <div class="col-4">
+                  <div class="row">
+                    <div class="label col pt-1 text-start ps-4">No. Nota</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4">INV-001</div>
+                  </div>
+                  <div class="row">
+                    <div class="label col pt-1 text-start ps-4">
+                      Total Harga
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4 fs-5">
+                      <span style="font-size: 16px">Rp </span>14000
+                    </div>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                    <div class="label col pt-1 text-start ps-4">Nama</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4">Haidar Firmansyah</div>
+                  </div>
+                </div>
+              </div>
+            </div></a
+          >
+          <a href="rincian-pesanan.html" style="text-decoration: none"
+            ><div
+              class="card card-info-pesanan mb-2"
+              style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+            >
+              <div class="info-1 row ms-0 me-0">
+                <!-- left -->
+                <div class="col-4">
+                  <div class="row">
+                    <div class="col pt-1 text-start ps-3">Tanggal Pesanan</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-3">16-11-024</div>
+                  </div>
+                </div>
+                <!-- mid -->
+                <div class="col-4">
+                  <div class="row">
+                    <div class="col pt-1 text-start ps-4">Estimasi Selesai</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4">17-11-2024</div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="row">
+                    <div class="status-pesanan col pt-2 text-end fw-bolder">
+                      Diproses
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="border-bottom"></div>
+              <div class="row mt-2 mb-2">
+                <!-- left -->
+                <div class="col-4">
+                  <div class="row">
+                    <div class="label col pt-1 text-start ps-4">No. Nota</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4">INV-001</div>
+                  </div>
+                  <div class="row">
+                    <div class="label col pt-1 text-start ps-4">
+                      Total Harga
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4 fs-5">
+                      <span style="font-size: 16px">Rp </span>14000
+                    </div>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="row">
+                    <div class="label col pt-1 text-start ps-4">Nama</div>
+                  </div>
+                  <div class="row">
+                    <div class="col text-start ps-4">Haidar Firmansyah</div>
+                  </div>
+                </div>
+              </div>
+            </div></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- End Grid Pesanan -->
+
+    <script src="CSS/boostrap.bundle.js"></script>
+    <script src="CSS/navbar.js"></script>
+  </body>
+</html>
